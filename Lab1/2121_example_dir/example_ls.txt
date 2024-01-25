@@ -1,0 +1,6 @@
+total 4
+drwxr-xr-x 1 lisan 197609    0 Jan 25 15:57 dir1/
+drwxr-xr-x 1 lisan 197609    0 Jan 25 15:57 dir2/
+drwxr-xr-x 1 lisan 197609    0 Jan 25 15:57 dir3/
+-rw-r--r-- 1 lisan 197609 3451 Jan 25 15:59 example_env.txt
+-rw-r--r-- 1 lisan 197609    0 Jan 25 16:04 example_ls.txt
