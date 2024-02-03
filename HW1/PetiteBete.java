@@ -18,10 +18,9 @@ public class PetiteBete{
 	}
 
 
-	// default constructor
-	// *****	duplicate default PetiteBete
+	// default constructor for generic PetiteBete
 	public PetiteBete() {
-		this(0,0,0,0,"Generic");
+		this(1, 1, 1, 5, "Baby");
 	}
 
 
@@ -63,13 +62,17 @@ public class PetiteBete{
 
 	// determines damage amount to pass to other.getHit
 	public void attack(PetiteBete other) {
-		int damage = atk * lvl;
+		int damage = lvl * atk;
+		other.getHit(damage);
 	}
 
 
 	// reduce health by damage amount
 	public void getHit(int damage) {
 		tol -= damage;
+		if (tol < 0){
+			tol = 0;
+		}
 	}
 
 

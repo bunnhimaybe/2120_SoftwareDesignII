@@ -2,17 +2,17 @@ public class Main{
 	public static void main(String[] args){
 		
 		// generic PetiteBetes
-		PetiteBete p1 = new PetiteBete();
-		PetiteBete p2 = new PetiteBete();
-		PetiteBete p3 = new PetiteBete();
+		PetiteBete baby = new PetiteBete();
+		PetiteBete child = new PetiteBete(5, 5, 5, 25, "Wittle Baby");
+		PetiteBete adult = new PetiteBete(10, 10, 10, 50, "Jerk");
 
+		// PetiteBetes in a field
+		PetiteBete[] petiteField = {baby, child, adult};
 
-		// PetiteBete array
-		PetiteBete[] petiteField = {p1, p2, p3};
+		adult.attack(baby);
+		adult.attack(child);
 
-		// run tester class
-		PetiteBeteTester test = new PetiteBeteTester();
-
+		// roster status
 		for (PetiteBete bete : petiteField){
 			System.out.println(bete.toString());
 		}
