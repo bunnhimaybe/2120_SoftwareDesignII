@@ -70,8 +70,18 @@ public class PetiteBete{
 	// reduce health by damage amount
 	public void getHit(int damage) {
 		tol -= damage;
+
+		// if negative damage, set to 0
 		if (tol < 0){
 			tol = 0;
+		}
+	}
+
+
+	// game status
+	public void status(PetiteBete[] game){
+		for (PetiteBete bete : game){
+			System.out.println(bete.toString());
 		}
 	}
 

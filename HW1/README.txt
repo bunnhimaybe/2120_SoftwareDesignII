@@ -1,10 +1,16 @@
-##	Petite Bete 
+##	Petite Bete
 	CSCI 2120 - Homework 1
+
+Contents:
+PetiteBete.java
+PetiteBeteTester.java [empty]
+Main.java
 
 ## 	How to compile
 
+Navigate to <HW1> within repository in a terminal.
+Compile all files with command " *.java ".
+
 ##	How to run
 
-## 	How to test
-
-Compile and run the file <PetiteBeteTester.java> to test PetiteBete.
+Use command " java Main.java " in terminal.
