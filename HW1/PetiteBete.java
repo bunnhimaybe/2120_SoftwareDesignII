@@ -25,16 +25,16 @@ public class PetiteBete{
 
 
 	// queries
-	public int getlvl() {
+	public int getLvl() {
 		return lvl;
 	}
-	public int getatk() {
+	public int getAtk() {
 		return atk;
 	}
-	public int getspd() {
+	public int getSpd() {
 		return spd;
 	}
-	public int gettol() {
+	public int getTol() {
 		return tol;
 	}
 	public String getName() {
@@ -78,14 +78,18 @@ public class PetiteBete{
 	}
 
 
-	// game status
-	public void status(PetiteBete[] game){
-		for (PetiteBete bete : game){
+	// group status
+	public static void status(PetiteBete[] group){
+		for (PetiteBete bete : group){
 			System.out.println(bete.toString());
 		}
 	}
 
 
+	/**
+	 * Display state of PetiteBete.
+	 * @return Returns a string containing PetiteBete's name, level, health, attack, and speed. 
+	 */
 	@Override
 	public String toString() {
 		String bete = "";

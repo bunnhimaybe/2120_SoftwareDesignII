@@ -1,9 +1,9 @@
 ##	Petite Bete
 	CSCI 2120 - Homework 1
 
-Contents:
+## 	Contents
 PetiteBete.java
-PetiteBeteTester.java [empty]
+PetiteBeteTester.java
 Main.java
 
 ## 	How to compile
@@ -13,4 +13,4 @@ Compile all files with command " *.java ".
 
 ##	How to run
 
-Use command " java Main.java " in terminal.
+Use command " java Main " in terminal.
