@@ -12,6 +12,7 @@ public class StudentTester{
 	private int i1, i2, i3;
 	private Student s1, s2, s3, s4, s5;
 	private ArrayList<Student> studentArray;
+	private ArrayList<Student> emptyArray;
 
 	@BeforeEach 
 	public void setup(){
@@ -24,6 +25,7 @@ public class StudentTester{
 		s4 = new Student("Healthy", "Gamer", 01, 5.0);		// minimum Student
 		s5 = new Student("Pearson", "Education", 56, 3.5);
 
+		emptyArray = new ArrayList<Student>();
 		studentArray = new ArrayList<Student>();
 		studentArray.add(s1);
 		studentArray.add(s2);
@@ -59,6 +61,7 @@ public class StudentTester{
 
 	@Test
 	public void testMinimum(){
+		assertNull(Student.findMinimum(emptyArray));
 		assertEquals(s4, Student.findMinimum(studentArray));
 	}
 

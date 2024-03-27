@@ -60,7 +60,7 @@ public class Student implements Comparable<Student> {
 
 		public static Student findMinimum(final ArrayList<Student> studentArray){
 			if (studentArray.isEmpty()) 
-				throw new IndexOutOfBoundsException("There are no students.");
+				return null;
 			
 			// base case
 			Student min = studentArray.get(0);
