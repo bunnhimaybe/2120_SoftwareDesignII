@@ -6,14 +6,12 @@ public class Student implements Comparable<Student> {
 		private String firstName;
 		private String lastName;
 		private double gpa;
-		private ArrayList<Student> studentArray;
 
 		public Student(String first, String last, int id, double gpa) {
 				this.firstName = first;
 				this.lastName = last;
 				this.studentID = id;
 				this.gpa = gpa;
-				this.studentArray = new ArrayList<Student>();
 		}
 
 		public String getFirstName() {
@@ -64,23 +62,20 @@ public class Student implements Comparable<Student> {
 			if (studentArray.isEmpty()) 
 				throw new IndexOutOfBoundsException("There are no students.");
 			
-			Student minimum = studentArray.get(0);
+			// base case
+			Student min = studentArray.get(0);
 
+			// compare to all other students
 			for (int i = 1; i < studentArray.size(); i++){
-				Student other = studentArray.get(i);
-				if (other.compareTo(minimum) < 0) {
-					minimum = other;
-				}
+				min = minimumStudent(min, studentArray.get(i));
 			}
 
-			return minimum;
+			return min;
 
 		}
 
-		private static Student minimum(Student s1, Student s2){
-			if (s1.compareTo(s2) < 0){
-				return s1;
-			} else return s2;
+		private static Student minimumStudent(Student s1, Student s2){
+			return (s1.compareTo(s2) < 0) ? s1 : s2;
 		}
 
 } // end class
