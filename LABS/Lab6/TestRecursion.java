@@ -4,13 +4,13 @@ import org.junit.Before;
 import org.junit.After;
 import org.junit.BeforeClass;
 import org.junit.AfterClass;
-import static org.junit.Assert.*;//Comment this out and uncomment
+//import static org.junit.Assert.*;//Comment this out and uncomment
 //import junit.framework.* and extends TestCase and things will also work
 
-//import junit.framework.*;//Makes TestCase and Asserts work
+import junit.framework.*;//Makes TestCase and Asserts work
 import java.io.*; //IO Library for testing System.out messages
 
-public class TestRecursion //extends TestCase
+public class TestRecursion extends TestCase
 {
 
 	private final ByteArrayOutputStream output = new ByteArrayOutputStream();

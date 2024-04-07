@@ -4,7 +4,6 @@ public class Recursion {
 		System.out.println("Fibonacci: " + fibonacci(10));
 		System.out.println("Factorial: " + factorial(5));
 		System.out.println(stringIterator("Beware M. Bison's psycho power!"));
-
 	}
 	
 	//Fibonacci: Each term equals the sum of prior two terms.
@@ -15,14 +14,12 @@ public class Recursion {
 	//Term 3: Term 1 + Term 2 = 1 + 1 = 2
 	//Term 4: Term 2 + Term 3 = 1 + 2 = 3
 	//Term 5: Term 3 + Term 4 = 2 + 3 = 5
-	public static long fibonacci(long nthTerm) {
-
-    	if (nthTerm == 0 || nthTerm ==1){
+	public static int fibonacci(int nthTerm) {
+    	if (nthTerm == 0 || nthTerm == 1){
     		return nthTerm;
     	} else {
     		return fibonacci(nthTerm - 1) + fibonacci(nthTerm - 2);
     	}
-
 	}
 	
 	//Factorial: Factorial is denoted by "!". Factorial means multiplying
@@ -36,16 +33,16 @@ public class Recursion {
 	//until we get to 5! = 5 x 4 x 3 x 2 x 1!. Because we know that
 	//1! = 1, once we reach 1!, our problem becomes solvable.
 	//By definition, 1! and 0! both equal 1. These are our base cases.
-	
 	//Implement a method which takes an int, n, as an argument
 	//and returns the factorial of that number.
-	public static long factorial(long n) {
+	public static int factorial(int n) {
 		System.out.println("n: " + n);//Keep this line
 
-        // IMPLEMENTATION GOES HERE!
-
-
-
+        if (n == 0 || n == 1){
+        	return 1;
+        } else {
+        	return n * factorial(n - 1);
+        }
 	}
 	
 	//This is a prelude to an upcoming homework. This method will iterate through
@@ -60,14 +57,15 @@ public class Recursion {
 	//Hint: This task can be done with 3 methods from the String class:
 	//.length(), .charAt() and .substring().
 
-	/*
 	public static char stringIterator(String string) {		
-		if (  BASE CASE ) {
-			return; // WHAT?
+		if (string.length() == 0) {
+        	return '\n';
+    	} 
+    	if ( string.charAt(string.length() - 1) == 'M') {
+			return 'M';
 		} else {
 			System.out.println(string);	//Keep this line
-			return; // RECURSIVE CALL
+			return stringIterator( string.substring(0, string.length() - 1) );
 		}
 	}
-	*/
 }

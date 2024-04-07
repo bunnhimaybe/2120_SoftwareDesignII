@@ -8,10 +8,10 @@ public class Student implements Comparable<Student> {
 		private double gpa;
 
 		public Student(String first, String last, int id, double gpa) {
-				this.firstName = first;
-				this.lastName = last;
-				this.studentID = id;
-				this.gpa = gpa;
+			this.firstName = first;
+			this.lastName = last;
+			this.studentID = id;
+			this.gpa = gpa;
 		}
 
 		public String getFirstName() {
