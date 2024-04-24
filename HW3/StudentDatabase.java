@@ -1,6 +1,7 @@
 /**
  * 	@author 	Nhi Pham
  * 	@version 	1.0
+ * 	Model to perform operations and manage Student data.
  */
 
 import java.util.ArrayList;
@@ -13,7 +14,8 @@ public class StudentDatabase{
 	private ArrayList<Student> students;
 	Iterator<Student> iterator;
 
-	// constructor 
+	/** StudentDatabase constructor.
+	 */
 	public StudentDatabase(){
 		students = new ArrayList<Student>();
 	}
@@ -59,19 +61,26 @@ public class StudentDatabase{
         return s;
 	}
 
-	public void addStudent(Student s){
-		students.add(s);
+/**	Add a student to the database.
+ * 	@param newStudent
+ */
+	public void addStudent(Student newStudent){
+		students.add(newStudent);
 	}
 
+/**	Remove a student from the database.
+ *  @param index 	Position of Student record to remove in StudentDatabase.
+ */
 	public void removeStudent(int index){
 		if (students.size() <= index){
-			System.err.println("Usage:  MakeRandomStudents numstudents");
-            System.exit(1);
+			System.err.println("Student does not exist in database.");
         } else {
 			students.remove(index);
 		}
 	}
 
+/** Print contents of the database.
+ */
 	public void printDatabase(){
 		iterator = students.iterator();
 		while (iterator.hasNext()){
@@ -79,6 +88,10 @@ public class StudentDatabase{
 		}
 	}
 
+/**	Return the index of a Student record based on their studentID.
+ * 	@param studentID 	studentID to look for.
+ * 	@return 			Index of Student in StudentDatabase.
+ */
 	public int indexOf(int studentID){
 		iterator = students.iterator();
 		int counter = 0;
